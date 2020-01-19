@@ -1,10 +1,11 @@
-const el = document.querySelector("#type-me");
+const el
 let text = "";
 let intervalId;
 let wordIndex = 0;
 let letterIndex = 0;
 
 function generateText(list) {
+  el = document.querySelector("#type-me")
   text = list[wordIndex];
   setTimeout(() => {
     typeForwardText(text);
