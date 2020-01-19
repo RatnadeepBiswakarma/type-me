@@ -1,11 +1,16 @@
-let el = null
+let el = null;
 let text = "";
 let intervalId;
 let wordIndex = 0;
 let letterIndex = 0;
+let list = [];
 
-function generateText(list) {
-  el = document.querySelector("#type-me")
+function generateText(stringList = []) {
+  if (!stringList || stringList.length < 1) {
+    throw Error("Please pass list of text correctly!");
+  }
+  list = stringList;
+  el = document.querySelector("#type-me");
   text = list[wordIndex];
   setTimeout(() => {
     typeForwardText(text);
@@ -46,18 +51,4 @@ function typeBackwardText(text) {
   }, 15);
 }
 
-function eraseText(text) {
-  if (letterIndex === 0) {
-    clearInterval(intervalId);
-    intervalId = setInterval(() => {
-      index++;
-      generateText(text);
-    }, 50);
-  } else {
-    letterIndex--;
-    let str = text.slice(0, letterIndex - 1);
-    typeBackwardText(str);
-  }
-}
-
-module.exports = generateText
+module.exports = generateText;
