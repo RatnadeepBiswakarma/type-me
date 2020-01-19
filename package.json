@@ -1,6 +1,6 @@
 {
   "name": "type-me",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Creates a basic typing text effect on the web",
   "main": "main.js",
   "scripts": {
