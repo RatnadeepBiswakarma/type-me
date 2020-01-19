@@ -1,19 +1,11 @@
-const sentences = [
-  "Hello world!",
-  "My name is Ratnadeep.",
-  "I'm a front-end developer.",
-  "I wrote this tiny typing library.",
-  "I love to build cool things like this..."
-];
-
-const el = document.querySelector(".text");
+const el = document.querySelector("#type-me");
 let text = "";
 let intervalId;
 let wordIndex = 0;
 let letterIndex = 0;
 
-function generateText() {
-  text = sentences[wordIndex];
+function generateText(list) {
+  text = list[wordIndex];
   setTimeout(() => {
     typeForwardText(text);
   }, 1000);
@@ -38,12 +30,12 @@ function typeBackwardText(text) {
     if (letterIndex < 0) {
       clearInterval(intervalId);
       letterIndex = 0;
-      if (wordIndex < sentences.length - 1) {
+      if (wordIndex < list.length - 1) {
         wordIndex += 1;
-        text = sentences[wordIndex];
+        text = list[wordIndex];
       } else {
         wordIndex = 0;
-        text = sentences[wordIndex];
+        text = list[wordIndex];
       }
       typeForwardText(text);
     } else {
@@ -67,4 +59,4 @@ function eraseText(text) {
   }
 }
 
-generateText();
+module.exports = generateText
