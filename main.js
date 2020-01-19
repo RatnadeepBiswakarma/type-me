@@ -1,4 +1,4 @@
-const el
+let el = null
 let text = "";
 let intervalId;
 let wordIndex = 0;
