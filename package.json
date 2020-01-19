@@ -1,0 +1,22 @@
+{
+  "name": "type-me",
+  "version": "2.1.1",
+  "description": "Creates a basic typing text effect on the web",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RatnadeepBiswakarma/type-me.git"
+  },
+  "files": [
+    "main.css"
+  ],
+  "author": "coder-ratnadeep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RatnadeepBiswakarma/type-me/issues"
+  },
+  "homepage": "https://github.com/RatnadeepBiswakarma/type-me#readme"
+}
